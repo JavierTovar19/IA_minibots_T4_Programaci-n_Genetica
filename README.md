@@ -48,4 +48,43 @@ Entre las respuestas que puede ofrecer MEPX se encuentran:
 ### 3. Suponga que tiene un robot que le entrega galletas al grupo de ingenieros de diseño de robots. Programe por PG el recorrido del robot, teniendo en cuenta que cada vez que un ingeniero recibe una galleta gana puntos. Los ingenieros están distribuidos en una sala cuadrada. Defina, conjunto de terminales, conjunto de funciones y función de aptitud.
 ### 4. Vea el video, https://www.youtube.com/watch?v=6KNuJn6dVy4. Analícelo y haga un ejemplo de control aplicando PG.
 
-En el control mediante Programación Genética, la ley de control no se diseña manualmente. El algoritmo genera varias expresiones matemáticas candidatas, las evalúa mediante una función de desempeño y mediante selección, cruce y mutación, evoluciona hacia una ley de control óptima. Entonces haremos el siguiente ejemplo
+En el control mediante Programación Genética, la ley de control no se diseña manualmente. El algoritmo genera varias expresiones matemáticas candidatas, las evalúa mediante una función de desempeño y mediante selección, cruce y mutación, evoluciona hacia una ley de control óptima. Entonces haremos el siguiente ejemplo:
+
+PROBLEMA: Queremos controlar la temperatura de una habitacion
+
+-Tempereatura deseada:25°C
+-Temperatura actual:20°C
+
+Entonces 
+
+Error=referencia - salida= 25 - 20= 5 (El controlador debe decidir que potencia darle al calefactor)
+
+Lo que hace la programacion genetica es crear muchas formulas al azar para luego probar cual de esas funciona mejor, luego de eso mejora las mejores formulas y asi se repite hasta que lograr encontrar une buena ley de control. Entonces:
+
+PASO 1: General controladores aleatorios
+
+-u=error
+
+-u=2 x error
+
+-u= error x error 
+
+-u = error - 1
+
+Cada una manda una diferente potencia al calefactor 
+
+PASO 2: Probar cada formula 
+
+Caso 1: u=error (La temperatura sube lento)
+
+Caso 2: u=2 x error (La temperatura llega mas rapido a 25)
+
+Caso 3: u=error x error (La temperatura sube demasiado y se pasa)
+
+PASO 3: Medir cual es mejor, para esto se usa una medida de desempeño en la cual si el error total en el tiempo es menor, entonces es mejor el controlador 
+
+PASO 4: La programacion genetica toma las mejores y las combina para crear una nueva y es algo que se repite muchas veces.
+
+Ahora miremolsa aplicada en phyton con mas variables como la perdida de calor o la eficiencia del calefactor. el codigo nos muestar como resultado lo siguiente:
+<img width="475" height="366" alt="{0B46305C-174A-40B2-8267-70E75FC28EC7}" src="https://github.com/user-attachments/assets/76c4c954-7011-4f42-93fb-b743e97d1725" />
+
