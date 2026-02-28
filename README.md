@@ -86,5 +86,7 @@ PASO 3: Medir cual es mejor, para esto se usa una medida de desempeño en la cua
 PASO 4: La programacion genetica toma las mejores y las combina para crear una nueva y es algo que se repite muchas veces.
 
 Ahora miremolsa aplicada en phyton con mas variables como la perdida de calor o la eficiencia del calefactor. el codigo nos muestar como resultado lo siguiente:
+
+
 <img width="475" height="366" alt="{0B46305C-174A-40B2-8267-70E75FC28EC7}" src="https://github.com/user-attachments/assets/76c4c954-7011-4f42-93fb-b743e97d1725" />
 
