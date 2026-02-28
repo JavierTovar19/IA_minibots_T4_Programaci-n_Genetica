@@ -85,8 +85,9 @@ PASO 3: Medir cual es mejor, para esto se usa una medida de desempeño en la cua
 
 PASO 4: La programacion genetica toma las mejores y las combina para crear una nueva y es algo que se repite muchas veces.
 
-Ahora miremolsa aplicada en phyton con mas variables como la perdida de calor o la eficiencia del calefactor. el codigo nos muestar como resultado lo siguiente:
+Ahora miremo como se aplica en phyton con mas variables como la perdida de calor o la eficiencia del calefactor. el codigo nos muestar como resultado lo siguiente:
 
 
 <img width="475" height="366" alt="{0B46305C-174A-40B2-8267-70E75FC28EC7}" src="https://github.com/user-attachments/assets/76c4c954-7011-4f42-93fb-b743e97d1725" />
 
+En este código simulé el control de temperatura de una habitación usando un modelo sencillo donde existe pérdida de calor hacia el ambiente y un controlador proporcional de la forma u=K⋅error. Al ejecutar la simulación en el tiempo, se observa que la temperatura aumenta rápidamente al inicio porque el error es grande y, por lo tanto, la acción de control también lo es. Después, el sistema se estabiliza de manera suave cerca de la referencia de 25 °C, sin presentar comportamientos inestables. Pero, la temperatura no llega exactamente al valor deseado, sino que se queda un poco por debajo, lo cual demuestra la presencia de error en estado estacionario, algo característico de un controlador proporcional. En general, los resultados obtenidos son coherentes con la teoría y muestran que el modelo funciona correctamente.
