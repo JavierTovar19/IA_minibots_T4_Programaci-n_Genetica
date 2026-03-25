@@ -51,7 +51,7 @@ El conjunto de terminales está compuesto por la posición del robot, la ubicaci
 
 Podemos observar el siguiente pseudocodigo con el que funcionaria:
 
-  INICIO
+    INICIO
 
     Definir posicion_robot (x, y)
     Definir lista_ingenieros = [(x1,y1), (x2,y2), ..., (xn,yn)]
@@ -88,12 +88,12 @@ Podemos observar el siguiente pseudocodigo con el que funcionaria:
 
     FIN MIENTRAS
 
-  // Calcular fitness final
-  fitness = puntaje - movimientos
+     // Calcular fitness final
+     fitness = puntaje - movimientos
 
-  MOSTRAR fitness
+    MOSTRAR fitness
 
-  FIN
+    FIN
 
 ### 4. Vea el video, https://www.youtube.com/watch?v=6KNuJn6dVy4. Analícelo y haga un ejemplo de control aplicando PG.
 
