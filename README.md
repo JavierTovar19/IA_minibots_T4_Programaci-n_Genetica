@@ -61,10 +61,8 @@ puntaje = 0
 movimientos = 0
 
 MIENTRAS exista al menos un ingeniero con estado = 0 HACER
-
-    Seleccionar ingeniero objetivo más cercano que no tenga galleta
-
-    MIENTRAS posicion_robot != posicion_objetivo HACER
+Seleccionar ingeniero objetivo más cercano que no tenga galleta
+MIENTRAS posicion_robot != posicion_objetivo HACER
         
         SI x_robot < x_objetivo ENTONCES
             mover_derecha()
