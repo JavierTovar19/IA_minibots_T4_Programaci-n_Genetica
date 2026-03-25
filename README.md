@@ -1,4 +1,4 @@
-# IA_minibots_T4_Programaci-n_Genetica
+# IA_minibots_T4_Programación_Genetica
 ## 4.12. Ejercicios
 **De los ejercicios 1 y 2, escoja 1 para realizar; y hacer 3 o 4.**
 
