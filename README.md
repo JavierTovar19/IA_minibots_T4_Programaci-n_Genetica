@@ -86,7 +86,7 @@ Podemos observar el siguiente pseudocodigo con el que funcionaria:
         puntaje = puntaje + 10
     FIN SI
 
-  FIN MIENTRAS
+    FIN MIENTRAS
 
   // Calcular fitness final
   fitness = puntaje - movimientos
