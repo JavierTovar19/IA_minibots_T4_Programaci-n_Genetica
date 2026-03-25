@@ -46,6 +46,57 @@ Entre las respuestas que puede ofrecer MEPX se encuentran:
 
 ### 2. Suponga que desea utilizar Programación Genética para encontrar el diseño de un circuito lógico, tome como, ejemplo el codificador de 7 segmentos. Describa el conjunto de terminales, el conjunto de funciones y la función de aptitud. Use una librería de Python.
 ### 3. Suponga que tiene un robot que le entrega galletas al grupo de ingenieros de diseño de robots. Programe por PG el recorrido del robot, teniendo en cuenta que cada vez que un ingeniero recibe una galleta gana puntos. Los ingenieros están distribuidos en una sala cuadrada. Defina, conjunto de terminales, conjunto de funciones y función de aptitud.
+
+El conjunto de terminales está compuesto por la posición del robot, la ubicación de los ingenieros y el estado de cada uno (si ha recibido o no una galleta). El conjunto de funciones incluye movimientos básicos en la cuadrícula (arriba, abajo, izquierda, derecha), la acción de entregar galletas y estructuras condicionales. La función de aptitud se define en función del número de galletas entregadas a los ingenieros, penalizando la cantidad de movimientos realizados, con el objetivo de maximizar la eficiencia del recorrido del robot. 
+
+Podemos observar el siguiente pseudocodigo con el que funcionaria:
+
+INICIO
+
+Definir posicion_robot (x, y)
+Definir lista_ingenieros = [(x1,y1), (x2,y2), ..., (xn,yn)]
+Definir estado_ingenieros = [0, 0, ..., 0]   // 0 = sin galleta, 1 = con galleta
+
+puntaje = 0
+movimientos = 0
+
+MIENTRAS exista al menos un ingeniero con estado = 0 HACER
+
+    Seleccionar ingeniero objetivo más cercano que no tenga galleta
+
+    MIENTRAS posicion_robot != posicion_objetivo HACER
+        
+        SI x_robot < x_objetivo ENTONCES
+            mover_derecha()
+        SINO SI x_robot > x_objetivo ENTONCES
+            mover_izquierda()
+        SINO SI y_robot < y_objetivo ENTONCES
+            mover_arriba()
+        SINO
+            mover_abajo()
+        FIN SI
+
+        actualizar posicion_robot
+        movimientos = movimientos + 1
+
+    FIN MIENTRAS
+
+    // Entregar galleta
+    SI ingeniero en esa posicion NO tiene galleta ENTONCES
+        entregar_galleta()
+        estado_ingenieros[i] = 1
+        puntaje = puntaje + 10
+    FIN SI
+
+FIN MIENTRAS
+
+// Calcular fitness final
+fitness = puntaje - movimientos
+
+MOSTRAR fitness
+
+FIN
+
 ### 4. Vea el video, https://www.youtube.com/watch?v=6KNuJn6dVy4. Analícelo y haga un ejemplo de control aplicando PG.
 
 En el control mediante Programación Genética, la ley de control no se diseña manualmente. El algoritmo genera varias expresiones matemáticas candidatas, las evalúa mediante una función de desempeño y mediante selección, cruce y mutación, evoluciona hacia una ley de control óptima. Entonces haremos el siguiente ejemplo:
