@@ -57,8 +57,8 @@ INICIO
   Definir lista_ingenieros = [(x1,y1), (x2,y2), ..., (xn,yn)]
   Definir estado_ingenieros = [0, 0, ..., 0]   // 0 = sin galleta, 1 = con galleta
 
-  puntaje = 0
-  movimientos = 0
+    puntaje = 0
+    movimientos = 0
 
     MIENTRAS exista al menos un ingeniero con estado = 0 HACER
         Seleccionar ingeniero objetivo más cercano que no tenga galleta
